@@ -100,7 +100,7 @@ def highlight(snippet, lang):
   if snippet[-1] == '\n' and end == '\n':
 	  end = ''
 
-  snippet = snippet.replace("__AMP__", "&amp;").replace("__LT__", "&lt;")
+  snippet = snippet.replace("__AMP__", "&amp;").replace("__LT__", "&lt;").replace("\\", "\\\\")
 
   return begin + snippet + end
 
